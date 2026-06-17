@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="David Ndungi — Computer Science student at St. Paul's University, Nairobi, building software and digital marketing projects." />
+    <title>David Ndungi | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+    <header>
+        <nav id="desktop-nav" class="nav-container">
+            <div class="logo">david<span>_ndungi</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li class="cta-nav"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav id="hamburger-nav" class="nav-container">
+            <div class="logo">david<span>_ndungi</span></div>
+            <div class="hamburger-menu">
+                <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu-links" id="mobile-menu">
+                    <li><a href="#about" onclick="toggleMenu()">~/about</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">~/skills</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">~/projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">~/contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="menu-overlay" onclick="toggleMenu()"></div>
+    </header>
+
+    <section id="profile">
+        <div class="profile-content">
+            <p class="eyebrow">Computer Science Scholar</p>
+            <h1 class="hero-title">David <span>Ndungi</span></h1>
+            <p class="hero-subtitle">Studying Computer Science. Building things that work, and thinking about how people find them.</p>
+
+            <div class="terminal-window hero-terminal" role="img" aria-label="Terminal showing: whoami returns David Ndungi. cat role.txt returns Computer Science Scholar at St. Paul's University. echo mission returns Code that ships, campaigns that grow.">
+                <div class="terminal-titlebar">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="path">guest@portfolio:~</span>
+                </div>
+                <div class="terminal-body" aria-hidden="true">
+                    <span class="terminal-line"><span class="prompt-symbol">$</span><span class="type-target" data-text="whoami"></span></span>
+                    <span class="terminal-line output" data-output="David Ndungi"></span>
+                    <span class="terminal-line"><span class="prompt-symbol">$</span><span class="type-target" data-text="cat role.txt"></span></span>
+                    <span class="terminal-line output" data-output="Computer Science Scholar @ St. Paul's University"></span>
+                    <span class="terminal-line"><span class="prompt-symbol">$</span><span class="type-target" data-text="echo $MISSION"></span></span>
+                    <span class="terminal-line output" data-output="Code that ships, campaigns that grow."><span class="cursor"></span></span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <div class="socials-row">
+                    <a href="https://linkedin.com/in/davidndungi" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:ndungidavid41@gmail.com" class="social-icon-btn" aria-label="Send email"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-image-wrapper">
+            <div class="photo-frame">
+                <img class="frame-img" src="./assets/bout.jpg" alt="Portrait of David Ndungi" onerror="this.closest('.photo-frame').classList.add('img-fallback')" />
+                <span class="corner corner-tl"></span>
+                <span class="corner corner-tr"></span>
+                <span class="corner corner-bl"></span>
+                <span class="corner corner-br"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section-tag">~/about</p>
+        <h1 class="title">About Me</h1>
+        <div class="about-grid">
+            <div class="about-graphics">
+                <img src="./assets/logo.jpg" alt="David's workspace" />
+                <span class="file-chip">workspace.jpg</span>
+            </div>
+            <div class="about-text-content">
+                <div class="about-cards-row">
+                    <div class="info-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                        <p><strong>Diploma in Computer Science</strong><br />St. Paul's University, Nairobi<br /><small style="color:var(--text-muted)">In progress</small></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Nairobi, Kenya<br />Open to remote work or on-site in Nairobi.</p>
+                    </div>
+                </div>
+                <p class="bio-paragraph">
+                    I'm a Computer Science student at St. Paul's University with a strong interest in digital marketing. I like working at the point where the two meet: building something with code, then thinking about how people actually find and use it. That mix keeps me comfortable picking up new tools fast, whether that's a programming language or a marketing platform.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <p class="section-tag">~/skills</p>
+        <h1 class="title">Skills</h1>
+        <div class="skills-wrapper">
+            <div class="skills-panel">
+                <h2><i class="fas fa-code"></i> Engineering</h2>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <h3>HTML5 &amp; CSS3</h3>
+                        <p class="skill-caption">Proficient</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>MySQL</h3>
+                        <p class="skill-caption">Intermediate</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>JavaScript</h3>
+                        <p class="skill-caption">Basic automation</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Python</h3>
+                        <p class="skill-caption">Scripting basics</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-panel">
+                <h2><i class="fas fa-chart-line"></i> Marketing &amp; Growth</h2>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <h3>SEO / SEM</h3>
+                        <p class="skill-caption">Keyword research</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Social Campaigns</h3>
+                        <p class="skill-caption">Content lifecycle</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Analytics</h3>
+                        <p class="skill-caption">Metrics &amp; reporting</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Team Collaboration</h3>
+                        <p class="skill-caption">Agile workflow</p>
+                        <div class="level-dots" aria-hidden="true">
+                            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <p class="section-tag">~/projects</p>
+        <h1 class="title">Recent Projects</h1>
+        <div class="projects-showcase">
+            <div class="project-card">
+                <div class="project-filebar">
+                    <span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span>
+                    <span class="filepath">/personal-hub</span>
+                </div>
+                <div class="project-media">
+                    <img src="./assets/project-1.png" alt="Screenshot of the personal portfolio site" onerror="this.style.display='none'" />
+                </div>
+                <div class="project-details">
+                    <h2>Personal Hub</h2>
+                    <p>A personal portfolio site built from scratch with semantic HTML and hand-written CSS, no framework. Focused on fast load times and smooth section transitions.</p>
+                    <div class="tag-row">
+                        <span class="tag-pill">HTML</span>
+                        <span class="tag-pill">CSS</span>
+                        <span class="tag-pill">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-secondary">View source</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-filebar">
+                    <span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span>
+                    <span class="filepath">/growth-funnel</span>
+                </div>
+                <div class="project-media">
+                    <img src="./assets/project-2.png" alt="Screenshot of the marketing funnel project" onerror="this.style.display='none'" />
+                </div>
+                <div class="project-details">
+                    <h2>Growth Funnel</h2>
+                    <p>A mock marketing campaign mapped end to end: audience research, a content calendar, and a funnel built to track where people dropped off.</p>
+                    <div class="tag-row">
+                        <span class="tag-pill">Strategy</span>
+                        <span class="tag-pill">SEO</span>
+                        <span class="tag-pill">Analytics</span>
+                    </div>
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-secondary">View case study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-filebar">
+                    <span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span>
+                    <span class="filepath">/relational-core</span>
+                </div>
+                <div class="project-media">
+                    <img src="./assets/project-3.png" alt="Entity relationship diagram for the database project" onerror="this.style.display='none'" />
+                </div>
+                <div class="project-details">
+                    <h2>Relational Core</h2>
+                    <p>A relational database designed from a sample brief, including entity relationship diagrams, normalized tables, and queries for common reports.</p>
+                    <div class="tag-row">
+                        <span class="tag-pill">MySQL</span>
+                        <span class="tag-pill">ERD</span>
+                        <span class="tag-pill">SQL</span>
+                    </div>
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-secondary">View schema</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <p class="section-tag">~/contact</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-container">
+            <p style="color: var(--text-muted); font-size: 1.05rem;">Have a project, an opportunity, or just want to talk shop? Reach out through any of the channels below.</p>
+            <div class="contact-deck">
+                <a href="mailto:ndungidavid41@gmail.com" class="contact-card">
+                    <i class="far fa-envelope"></i>
+                    <div class="contact-text">
+                        <span class="contact-label">Email</span>
+                        <p>ndungidavid41@gmail.com</p>
+                    </div>
+                </a>
+                <a href="tel:+254759929646" class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="contact-text">
+                        <span class="contact-label">Phone</span>
+                        <p>+254 759 929 646</p>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/davidndungi" target="_blank" rel="noopener" class="contact-card">
+                    <i class="fab fa-linkedin-in"></i>
+                    <div class="contact-text">
+                        <span class="contact-label">LinkedIn</span>
+                        <p>linkedin.com/in/davidndungi</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <ul class="footer-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p>&copy; 2026 David Ndungi. All rights reserved.</p>
+            <span class="build-tag">built with HTML, CSS &amp; JS</span>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
